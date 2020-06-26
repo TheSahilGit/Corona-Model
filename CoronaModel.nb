@@ -3,8 +3,8 @@ Manipulate[
   Evaluate[{i[t], r[t], ni[t]} /.
     NDSolve[{i'[t] == ir*i[t]*ni[t] - rr*i[t], r'[t] == rr*i[t], 
       ni'[t] == -ir*ni[t]*i[t], i[0] == 0.01, r[0] == 0, 
-      ni[0] == 1 - i[0]}, {i, r, ni}, {t, 0, 15}]
+      ni[0] == 1 - i[0]}, {i, r, ni}, {t, 0, 100}]
    	], 
-  		{t, 0, 20}, 
+  		{t, 0, 70}, 
   PlotLegends -> {"Infected", "Recovered", "Not Infected yet"}],
- 			{ir, 2, 10}, {rr, 0.1, 5}]
+ 			{ir, 0.25, 10}, {rr, 0.1, 5}]
